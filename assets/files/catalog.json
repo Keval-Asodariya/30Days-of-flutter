@@ -1,0 +1,68 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 12 Pro",
+            "desc": "Apple iPhone 12th generation",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://img.giznext.com/assets/model/2/95/apple-mobiles-apple-iphone-12-pro-max-11-1634196430.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Pixel 5",
+            "desc": "Google Pixel phone 5th generation",
+            "price": 699,
+            "color": "#00ac51",
+            "image": "https://cdn.dxomark.com/wp-content/uploads/medias/post-59199/google_pixel_5_frontback.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "M1 Macbook Air",
+            "desc": "Apple Macbook air with apple silicon",
+            "price": 1099,
+            "color": "#e0bfae",
+            "image": "https://www.zdnet.com/a/img/resize/2491d3769501659681d36163da8c5ed684cfe3aa/2020/11/23/60709490-36f6-469d-942d-bc1fab9fde87/macbook-air-m1-overhead.jpg?auto=webp&width=1092"
+        },
+        {
+            "id": 4,
+            "name": "Playstation 5",
+            "desc": "Sony Playstation 5th generation",
+            "price": 500,
+            "color": "#544ee4",
+            "image": "https://www.gizbot.com/images/2020-06/sony-playstation-5_159298674420.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Airpods Pro",
+            "desc": "Apple Aipods Pro 1st generation",
+            "price": 200,
+            "color": "#e3e4e9",
+            "image": "https://i0.wp.com/maplestore.in/wp-content/uploads/2021/10/r1250_PDP_Image_Position-1__en-IN-scaled.jpg?resize=720%2C720&ssl=1"
+        },
+        {
+            "id": 6,
+            "name": "iPad Pro",
+            "desc": "Apple iPad Pro 2020 edition",
+            "price": 799,
+            "color": "#f73984",
+            "image": "https://www.pngitem.com/pimgs/m/283-2836327_apple-11-inch-new-ipad-pro-ipad-pro.png"
+        },
+        {
+            "id": 7,
+            "name": "Galaxy S21 Ultra",
+            "desc": "Samsung Galaxy S21 Ultra 2021 edition",
+            "price": 1299,
+            "color": "#1c1c1c",
+            "image": "https://m.media-amazon.com/images/I/81kfA-GtWwL._AC_UY218_.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Galaxy S21",
+            "desc": "Samsung Galaxy S21 2021 edition",
+            "price": 899,
+            "color": "#7c95eb",
+            "image": "https://m.media-amazon.com/images/I/8131pwAojZL._AC_UY218_.jpg"
+        }
+    ]
+}

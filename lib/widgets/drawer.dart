@@ -2,52 +2,64 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     final imageUrl =
-        "https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png";
-
+        "https://avatars.githubusercontent.com/u/12619420?s=460&u=26db98cbde1dd34c7c67b85c240505a436b2c36d&v=4";
     return Drawer(
       child: Container(
-        color: Colors.lightGreen,
+        color: Colors.deepPurple,
         child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                accountName: Text("Keval Asodariya"),
-                accountEmail: Text("kpasodariya@gmail.com"),
-                currentAccountPicture: Image.network(imageUrl),
+                accountName: Text("Pawan Kumar"),
+                accountEmail: Text("mtechviral@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(imageUrl),
+                ),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.home,
+                color: Colors.white,
               ),
               title: Text(
                 "Home",
                 textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
             ListTile(
               leading: Icon(
-                CupertinoIcons.printer,
+                CupertinoIcons.profile_circled,
+                color: Colors.white,
               ),
               title: Text(
-                "Statment",
+                "Profile",
                 textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
             ListTile(
               leading: Icon(
-                CupertinoIcons.power,
+                CupertinoIcons.mail,
+                color: Colors.white,
               ),
               title: Text(
-                "Logout",
+                "Email me",
                 textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             )
           ],

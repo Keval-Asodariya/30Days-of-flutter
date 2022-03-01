@@ -6,8 +6,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
-  const CatalogList({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -16,15 +14,16 @@ class CatalogList extends StatelessWidget {
       itemBuilder: (context, index) {
         final catalog = CatalogModel.items[index];
         return InkWell(
-            onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => homeDetailsPage(
-                      catalog: catalog,
-                    ),
-                  ),
-                ),
-            child: CatalogItem(catalog: catalog, key: key));
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomeDetailPage(
+                catalog: catalog,
+              ),
+            ),
+          ),
+          child: CatalogItem(catalog: catalog),
+        );
       },
     );
   }
@@ -49,36 +48,35 @@ class CatalogItem extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-                catalog.desc.text.xl.make(),
-                10.heightBox,
-                ButtonBar(
-                  alignment: MainAxisAlignment.spaceBetween,
-                  buttonPadding: EdgeInsets.zero,
-                  children: [
-                    "\$${catalog.price}".text.bold.xl.make(),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                            MyTheme.darkBluishColor,
-                          ),
-                          shape: MaterialStateProperty.all(
-                            StadiumBorder(),
-                          )),
-                      child: "Buy".text.make(),
-                    )
-                  ],
-                ).pOnly(right: 8.0)
-              ],
-            ),
-          )
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+              catalog.desc.text.make(),
+              10.heightBox,
+              ButtonBar(
+                alignment: MainAxisAlignment.spaceBetween,
+                buttonPadding: EdgeInsets.zero,
+                children: [
+                  "\$${catalog.price}".text.bold.xl.make(),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          MyTheme.darkBluishColor,
+                        ),
+                        shape: MaterialStateProperty.all(
+                          StadiumBorder(),
+                        )),
+                    child: "Add to cart".text.make(),
+                  )
+                ],
+              ).pOnly(right: 8.0)
+            ],
+          ))
         ],
       ),
-    ).white.rounded.square(160).make().py20();
+    ).white.rounded.square(150).make().py16();
   }
 }
